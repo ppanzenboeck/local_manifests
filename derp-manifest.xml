@@ -1,21 +1,26 @@
 <manifest>
-  <remote name="panz" fetch="https://github.com/ppanzenboeck" revision="derp15.1"/>
-  <remote name="lineagee" fetch="https://github.com/LineageOS" revision="lineage-22.1"/>
-  <remote name="muppets" fetch="https://github.com/themuppets" revision="lineage-22.1"/>
+  <remote name="panz" fetch="https://github.com/ppanzenboeck" revision="derp15.2"/>
+  <remote name="lineagee" fetch="https://github.com/LineageOS" revision="lineage-22.2"/>  
+  <remote name="muppets" fetch="https://github.com/themuppets" revision="lineage-22.2"/>
   <remote name="panzgitlab" fetch="https://gitlab.com/jakobBokaj1" revision="derp14"/>
+  <remote name="nameless" fetch="https://bitbucket.org/nameless-aosp" revision="fifteen"/>
 
-  <project path="device/oneplus/instantnoodle" name="device_oneplus_instantnoodle" remote="panz"/>
-  <project path="device/oneplus/instantnoodlep" name="device_oneplus_instantnoodlep" remote="panz"/>
-  <project path="device/oneplus/kebab" name="device_oneplus_kebab" remote="panz"/>
+  <project path="device/oneplus/instantnoodlep" name="android_device_oneplus_instantnoodlep" remote="lineagee"/>
+  <project path="device/oneplus/instantnoodle" name="android_device_oneplus_instantnoodle" remote="lineagee"/>
+  <project path="device/oneplus/kebab" name="android_device_oneplus_kebab" remote="lineagee"/>
   <project path="device/oneplus/sm8250-common" name="device_oneplus_sm8250-common" remote="panz"/>
 
   <project path="kernel/oneplus/sm8250" name="kernel_oneplus_sm8250-meteoric" remote="panz"/>
+  <!-- 
+  <project path="kernel/oneplus/sm8250" name="android_kernel_oneplus_sm8250" remote="lineagee"/>
+  <project path="kernel/oneplus/sm8250" name="kernel_oneplus_sm8250" remote="panz" revision="ksu-next"/>
+  -->
 
-  <project path="vendor/oneplus/instantnoodle" name="vendor_oneplus_instantnoodle" remote="panz" revision="lineage-22.1"/>
-  <project path="vendor/oneplus/instantnoodlep" name="vendor_oneplus_instantnoodlep" remote="panz" revision="lineage-22.1"/>
-  <project path="vendor/oneplus/kebab" name="vendor_oneplus_kebab" remote="panz" revision="lineage-22.1"/>
-  <project path="vendor/oneplus/sm8250-common" name="vendor_oneplus_sm8250-common" remote="panz"/>
-  <project path="vendor/oneplus/camera" name="vendor_oneplus_camera" remote="panzgitlab"/>
+  <project path="vendor/oneplus/instantnoodlep" name="proprietary_vendor_oneplus_instantnoodlep" remote="muppets"/>
+  <project path="vendor/oneplus/instantnoodle" name="proprietary_vendor_oneplus_instantnoodle" remote="muppets"/>
+  <project path="vendor/oneplus/kebab" name="proprietary_vendor_oneplus_kebab" remote="muppets"/>
+  <project path="vendor/oneplus/sm8250-common" name="proprietary_vendor_oneplus_sm8250-common" remote="muppets"/>
+  <project path="vendor/oneplus/camera" name="vendor_oneplus_camera" remote="nameless"/>
 
   <project path="hardware/oplus" name="hardware_oplus" remote="panz"/>
   
