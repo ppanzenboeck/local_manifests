@@ -8,7 +8,7 @@
   <project path="device/oneplus/enchilada" name="device_oneplus_enchilada" remote="panz"/>
   <project path="device/oneplus/sdm845-common" name="device_oneplus_sdm845-common" remote="panz"/>
 
-  <project path="kernel/oneplus/sdm845" name="android_kernel_oneplus_sdm845" remote="lineagee"/>
+  <project path="kernel/oneplus/sdm845" name="kernel_oneplus_sdm845" remote="panz"/>
   <!-- 
   <project path="kernel/oneplus/sdm845" name="kernel_oneplus_sdm845" remote="panz" revision="derp15.2-ksu-n-susfs"/>
   -->
