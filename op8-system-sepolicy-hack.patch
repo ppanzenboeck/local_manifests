@@ -1,0 +1,95 @@
+diff --git a/private/domain.te b/private/domain.te
+index 42c53377e..bf2b1ed23 100644
+--- a/private/domain.te
++++ b/private/domain.te
+@@ -2091,49 +2091,49 @@ full_treble_only(`
+   });
+ ')
+ 
+-full_treble_only(`
++#full_treble_only(`
+   # Do not allow system components access to /vendor files except for the
+   # ones allowed here.
+-  neverallow {
+-    coredomain
+-    # TODO(b/37168747): clean up fwk access to /vendor
+-    -crash_dump
+-    -crosvm # loads vendor-specific disk images
+-    -init # starts vendor executables
+-    -kernel # loads /vendor/firmware
+-    -heapprofd
+-    userdebug_or_eng(`-profcollectd')
+-    -shell
+-    userdebug_or_eng(`-simpleperf_boot')
+-    -system_executes_vendor_violators
+-    -traced_perf # library/binary access for symbolization
+-    -ueventd # reads /vendor/ueventd.rc
+-    -vold # loads incremental fs driver
+-    userdebug_or_eng(`-overlay_remounter')
+-  } {
+-    vendor_file_type
+-    -same_process_hal_file
+-    -vendor_app_file
+-    -vendor_apex_file
+-    -vendor_apex_metadata_file
+-    -vendor_boot_ota_file
+-    -vendor_cgroup_desc_file
+-    -vendor_configs_file
+-    -vendor_microdroid_file
+-    -vendor_service_contexts_file
+-    -vendor_framework_file
+-    -vendor_idc_file
+-    -vendor_keychars_file
+-    -vendor_keylayout_file
+-    -vendor_overlay_file
+-    -vendor_public_framework_file
+-    -vendor_public_lib_file
+-    -vendor_task_profiles_file
+-    -vendor_uuid_mapping_config_file
+-    -vndk_sp_file
+-    -vendor_aconfig_storage_file
+-  }:file *;
+-')
++#  neverallow {
++#    coredomain
++#    # TODO(b/37168747): clean up fwk access to /vendor
++#    -crash_dump
++#    -crosvm # loads vendor-specific disk images
++#    -init # starts vendor executables
++#    -kernel # loads /vendor/firmware
++#    -heapprofd
++#    userdebug_or_eng(`-profcollectd')
++#    -shell
++#    userdebug_or_eng(`-simpleperf_boot')
++#    -system_executes_vendor_violators
++#    -traced_perf # library/binary access for symbolization
++#    -ueventd # reads /vendor/ueventd.rc
++#    -vold # loads incremental fs driver
++#    userdebug_or_eng(`-overlay_remounter')
++#  } {
++#    vendor_file_type
++#    -same_process_hal_file
++#    -vendor_app_file
++#    -vendor_apex_file
++#    -vendor_apex_metadata_file
++#    -vendor_boot_ota_file
++#    -vendor_cgroup_desc_file
++#    -vendor_configs_file
++#    -vendor_microdroid_file
++#    -vendor_service_contexts_file
++#    -vendor_framework_file
++#    -vendor_idc_file
++#    -vendor_keychars_file
++#    -vendor_keylayout_file
++#    -vendor_overlay_file
++#    -vendor_public_framework_file
++#    -vendor_public_lib_file
++#    -vendor_task_profiles_file
++#    -vendor_uuid_mapping_config_file
++#    -vndk_sp_file
++#    -vendor_aconfig_storage_file
++#  }:file *;
++#')
+ 
+ # mlsvendorcompat is only for compatibility support for older vendor
+ # images, and should not be granted to any domain in current policy.
