@@ -17,18 +17,20 @@
 
   <!-- sepolicy vndr -->
   <remove-project name="LineageOS/android_device_qcom_sepolicy_vndr"/>
+  <!--
   <project path="device/qcom/sepolicy_vndr/sm8650" name="android_device_qcom_sepolicy_vndr" remote="org" revision="lineage-22.2-caf-sm8650"/>
+  -->
+  <project path="device/qcom/sepolicy_vndr/sm8650" name="android_device_qcom_sepolicy_vndr" remote="lineagee" revision="lineage-23.0-caf-sm8650"/>
 
   <project path="device/oneplus/waffle" name="android_device_oneplus_waffle" remote="panz"/>
   <project path="device/oneplus/sm8650-common" name="android_device_oneplus_sm8650-common" remote="panz"/>
 
   <!-- ksu kernel and submodule -->
-  <project path="kernel/oneplus/sm8650" name="kernel_oneplus_sm8650-anaconda" remote="panz"/>
+  <project path="kernel/oneplus/sm8650" name="kernel_oneplus_sm8650-anaconda" remote="panz" revision="derp16-oct-fixed"/>
   <project path="kernel/oneplus/sm8650/KernelSU-Next" name="KernelSU-Next" remote="panz" />
   
-  <!--<project path="kernel/oneplus/sm8650" name="kernel_oneplus_sm8650" remote="panz"/>-->
-  <project path="kernel/oneplus/sm8650-devicetrees" name="kernel_oneplus_sm8650-devicetrees" remote="yaap" />
-  <project path="kernel/oneplus/sm8650-modules" name="kernel_oneplus_sm8650-modules" remote="yaap" />
+  <project path="kernel/oneplus/sm8650-devicetrees" name="kernel_oneplus_sm8650-devicetrees" remote="panz" revision="derp16-oct-fixed" />
+  <project path="kernel/oneplus/sm8650-modules" name="kernel_oneplus_sm8650-modules" remote="panz" revision="derp16-oct-fixed"/>
 
   <project path="vendor/oneplus/waffle" name="vendor_oneplus_waffle" remote="panz"/>
   <project path="vendor/oneplus/sm8650-common" name="vendor_oneplus_sm8650-common" remote="panz"/>
