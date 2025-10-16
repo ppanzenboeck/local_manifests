@@ -25,8 +25,8 @@
   <project path="device/oneplus/waffle" name="android_device_oneplus_waffle" remote="panz"/>
   <project path="device/oneplus/sm8650-common" name="android_device_oneplus_sm8650-common" remote="panz"/>
 
-  <!-- ksu kernel and submodule -->
-  <project path="kernel/oneplus/sm8650" name="kernel_oneplus_sm8650-anaconda" remote="panz" revision="derp16-oct-fixed"/>
+  <!-- ksu kernel and submodule append -ksu for ksu branch -->
+  <project path="kernel/oneplus/sm8650" name="kernel_oneplus_sm8650-anaconda" remote="panz" revision="derp16-oct-fixed-fr"/>
   <project path="kernel/oneplus/sm8650/KernelSU-Next" name="KernelSU-Next" remote="panz" />
   
   <project path="kernel/oneplus/sm8650-devicetrees" name="kernel_oneplus_sm8650-devicetrees" remote="panz" revision="derp16-oct-fixed" />
