@@ -1,0 +1,22 @@
+<manifest>
+  <remote name="davidev" fetch="https://github.com/DaViDev985" revision="derp13"/>
+  <remote name="LineageOS" fetch="https://github.com/LineageOS" revision="lineage-20"/>
+
+  <!--DEVICE-->
+    <project path="device/lge/h870" name="device_lge_h870" remote="davidev" />
+    <project path="device/lge/g6-common" name="device_lge_g6-common" remote="davidev" />
+    <project path="device/lge/msm8996-common" name="device_lge_msm8996-common" remote="davidev" />
+  <!--VENDOR-->
+    <project path="vendor/lge/h870" name="TheMuppets/proprietary_vendor_lge_h870" revision="lineage-20" remote="github" />
+    <project path="vendor/lge/g6-common" name="TheMuppets/proprietary_vendor_lge_g6-common" revision="lineage-20" remote="github" />
+    <project path="vendor/lge/msm8996-common" name="TheMuppets/proprietary_vendor_lge_msm8996-common" revision="lineage-20" remote="github" />
+  <!--KERNEL-->
+    <project path="kernel/lge/msm8996" name="android_kernel_lge_msm8996" remote="LineageOS" />
+  <!--HARDWARE-->
+    <project path="hardware/lge" name="android_hardware_lge" remote="LineageOS" />
+    <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="LineageOS" />
+
+  <!--ViPER4AndroidFX-->
+    <project name="TogoFire/packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" revision="v4a" remote="github" clone-depth="1" />
+
+</manifest>
