@@ -1,0 +1,59 @@
+<manifest>
+  <remote name="panz" fetch="https://github.com/ppanzenboeck" revision="derp16.2-non-arb"/>
+  <remote name="muppets" fetch="https://github.com/TheMuppets" revision="lineage-23.2"/>
+  <remote name="lineagee" fetch="https://github.com/LineageOS" revision="lineage-23.0"/>
+  <remote name="yaap" fetch="https://github.com/yaap" revision="sixteen"/>
+
+<!-- should we ever need it
+  <project path="hardware/qcom-caf/sm8650/audio/agm" name="LineageOS/android_vendor_qcom_opensource_agm" groups="qcom,lanai-audio" revision="lineage-23.0-caf-sm8650" />
+  <project path="hardware/qcom-caf/sm8650/audio/graphservices" name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" groups="qcom" revision="lineage-23.0-caf-sm8650" />
+  <project path="hardware/qcom-caf/sm8650/audio/pal" name="LineageOS/android_vendor_qcom_opensource_arpal-lx" groups="qcom,lanai-audio" revision="lineage-23.0-caf-sm8650" />
+  <project path="hardware/qcom-caf/sm8650/audio/primary-hal" name="LineageOS/android_hardware_qcom_audio-ar" groups="qcom,lanai-audio" revision="lineage-23.0-caf-sm8650" />
+  <project path="hardware/qcom-caf/sm8650/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lanai-vendor" revision="lineage-23.0-caf-sm8650" />
+  <project path="hardware/qcom-caf/sm8650/dataipa" name="LineageOS/android_vendor_qcom_opensource_dataipa" groups="qcom,lanai-vendor" revision="lineage-23.0-caf-sm8650" />
+  <project path="hardware/qcom-caf/sm8650/display" name="LineageOS/android_hardware_qcom_display" groups="qcom" revision="lineage-23.0-caf-sm8650" />
+-->
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal-ar"/>
+
+  <!-- no longer needed, but let's keep it
+  <remove-project name="LineageOS/android_device_qcom_sepolicy_vndr"/>
+  <project path="device/qcom/sepolicy_vndr/sm8650" name="android_device_qcom_sepolicy_vndr" remote="org" revision="lineage-22.2-caf-sm8650"/>
+  <project path="device/qcom/sepolicy_vndr/sm8650" name="android_device_qcom_sepolicy_vndr" remote="lineagee" revision="lineage-23.2-caf-sm8650"/>
+  -->
+
+  <!-- UNCOMMENT WHAT YOU WANT TO BUILD (ARB/NON-ARB)-->
+
+  <!-- NON ARB firmware 16.0.0.400
+  <project path="device/oneplus/waffle" name="android_device_oneplus_waffle" remote="panz" revision="derp16.2-non-arb"/>
+  <project path="device/oneplus/sm8650-common" name="android_device_oneplus_sm8650-common" remote="panz" revision="derp16.2-non-arb"/>
+
+  <project path="kernel/oneplus/sm8650" name="android_kernel_oneplus_sm8650" remote="panz" revision="derp16.2-non-arb"/>
+  <project path="kernel/oneplus/sm8650/KernelSU-Next" name="KernelSU-Next" remote="panz" revision="derp16.2-waffle" />
+  
+  <project path="kernel/oneplus/sm8650-devicetrees" name="kernel_oneplus_sm8650-devicetrees" remote="panz" revision="derp16.2-non-arb"/>
+  <project path="kernel/oneplus/sm8650-modules" name="kernel_oneplus_sm8650-modules" remote="panz" revision="derp16.2-non-arb"/>
+
+
+  <project path="hardware/oplus" name="hardware_oplus" remote="panz" revision="derp16.2-non-arb"/>
+  -->
+
+  <!-- ARB firmware 16.0.0.500
+  <project path="device/oneplus/waffle" name="android_device_oneplus_waffle" remote="panz" revision="derp16.2-arb"/>
+  <project path="device/oneplus/sm8650-common" name="android_device_oneplus_sm8650-common" remote="panz" revision="derp16.2-arb"/>
+
+  <project path="kernel/oneplus/sm8650" name="android_kernel_oneplus_sm8650" remote="panz" revision="derp16.2-arb"/>
+  <project path="kernel/oneplus/sm8650/KernelSU-Next" name="KernelSU-Next" remote="panz" revision="derp16.2-waffle" />
+  
+  <project path="kernel/oneplus/sm8650-devicetrees" name="kernel_oneplus_sm8650-devicetrees" remote="panz" revision="derp16.2-arb"/>
+  <project path="kernel/oneplus/sm8650-modules" name="kernel_oneplus_sm8650-modules" remote="panz" revision="derp16.2-arb"/>
+
+  <project path="hardware/oplus" name="hardware_oplus" remote="panz" revision="derp16.2-arb"/>
+  -->
+
+  <!-- don't forget to apply camera patch and/or non-arb patch in both vendor repos! -->
+  <project path="vendor/oneplus/waffle" name="proprietary_vendor_oneplus_waffle" remote="muppets"/>
+  <project path="vendor/oneplus/sm8650-common" name="proprietary_vendor_oneplus_sm8650-common" remote="muppets"/>
+  
+  <project name="TogoFire/packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" revision="v4a" remote="github" />
+  <project name="packages_apps_GameBar" path="packages/apps/GameBar" remote="panz" revision="in-apps" />
+</manifest>
