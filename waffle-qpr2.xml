@@ -55,4 +55,13 @@
   -->
   <project name="TogoFire/packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" revision="v4a" remote="github" />
   <project name="packages_apps_GameBar" path="packages/apps/GameBar" remote="panz" revision="in-apps" />
+
+  <!-- source package overrides -->
+  <!-- yaap's downgraded Aperture -->
+  <remove-project name="LineageOS/android_packages_apps_Aperture"/>
+  <project name="android_packages_apps_Aperture" path="packages/apps/Aperture" remote="panz" revision="sixteen-camera2" />
+
+  <!-- I don't do server OTA -->
+  <remove-project name="android_packages_apps_Updater"/>
+  <project name="android_packages_apps_Updater" path="packages/apps/Updater" remote="panz" revision="panz" />
 </manifest>
