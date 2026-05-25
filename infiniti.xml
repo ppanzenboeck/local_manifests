@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Device : OnePlus 15 (infiniti) -->
+
+<manifest>
+
+<!-- Remotes -->
+    <remote             name="lineage"     fetch="https://github.com/LineageOS"   revision="lineage-23.2"                      />
+    <remote             name="org"     fetch="https://github.com/OnePlus-SM8850-Development"   revision="lineage-23.2"                            />
+    <remote             name="panz"        fetch="https://github.com/ppanzenboeck" revision="derp16.2"/>
+
+
+
+<!-- Device -->
+    <project            remote="panz"   name="android_device_oneplus_infiniti"              path="device/oneplus/infiniti"             />
+    <project            remote="panz"   name="android_device_oneplus_sm8850-common"         path="device/oneplus/sm8850-common"       />
+
+
+<!-- Vendor -->
+    <project            remote="org"   name="proprietary_vendor_oneplus_infiniti"          path="vendor/oneplus/infiniti"              />
+    <project            remote="org"   name="proprietary_vendor_oneplus_sm8850-common"     path="vendor/oneplus/sm8850-common"        />
+
+
+<!-- Kernel -->
+    <project            remote="org"   name="android_device_oneplus_infiniti-kernel"       path="device/oneplus/infiniti-kernel"               />
+
+
+<!-- Hardware -->
+    <project            remote="org"   name="android_hardware_oplus"                   path="hardware/oplus"                      />
+
+
+<!-- Overrides -->
+
+<remove-project                                                                        path="hardware/lineage/compat"     />
+<project            remote="org"   name="android_hardware_lineage_compat"              path="hardware/lineage/compat"     revision="lineage-23.2"/>
+
+<remove-project                                                                        path="vendor/qcom/opensource/usb"     />
+<project            remote="org"   name="android_vendor_qcom_opensource_usb"           path="vendor/qcom/opensource/usb"/>
+
+<remove-project                                                                        path="hardware/qcom-caf/thermal"     />
+<project            remote="org"   name="android_hardware_qcom_thermal"                path="hardware/qcom-caf/thermal" />
+    
+
+<!-- DON'T REPLACE THIS, INSTEAD PICK
+    <remove-project                                                                        path="hardware/qcom-caf/common"     />
+    <project            remote="org"   name="android_hardware_qcom-caf_common"             path="hardware/qcom-caf/common/"     revision="lineage-23.2"/>
+
+-->
+
+    
+<!-- platform -->
+<project path="vendor/qcom/opensource/dataipa" name="OnePlus-SM8850-Development/android_vendor_qcom_opensource_dataipa" revision="lineage-23.2-caf-sm8850" />
+<project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="OnePlus-SM8850-Development/android_vendor_qcom_opensource_data-ipa-cfg-mgr" revision="lineage-23.2-caf-sm8850" />
+<project path="hardware/qcom-caf/sm8850/audio/primary-hal" name="OnePlus-SM8850-Development/android_hardware_qcom_audio-ar" revision="lineage-23.2-caf-sm8850" />
+<project path="device/qcom/sepolicy_vndr/sm8850" name="OnePlus-SM8850-Development/android_device_qcom_sepolicy_vndr" revision="lineage-23.2-caf-sm8850" />
+<project path="kernel/oneplus/sm8850" name="kernel/common" revision="android16-6.12-lts" clone-depth="1" remote="aosp" />
+
+<!-- VENDOR LINEAGE NEEDS A COMMIT ALSO -->
+
+<!-- PANZ -->
+    <project            remote="panz"      name="packages_apps_ViPER4AndroidFX"                path="packages/apps/ViPER4AndroidFX" revision="aidl"/>
+    <project            remote="panz"      name="packages_apps_GameBar"                        path="packages/apps/GameBar" revision="in-apps" />
+    <remove-project                        name="android_packages_apps_Updater"/>
+    <project            remote="panz"      name="android_packages_apps_Updater"                path="packages/apps/Updater" revision="panz"/>
+
+
+</manifest>
